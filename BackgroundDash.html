@@ -45,8 +45,8 @@
             <li class="mb-3"><a href="submitDash.html" class="flex items-center gap-2 hover:text-[#FDC031]">
                 <i class="fa-solid fa-user"></i>
                 submit</a></li>
-         <li class="mb-3"><a href="resetpassword.html" class="flex items-center gap-2 hover:text-[#FDC031]">
-              <i class="fa-solid fa-unlock-keyhole"></i>
+            <li class="mb-3"><a href="resetpassword.html" class="flex items-center gap-2 hover:text-[#FDC031]">
+                <i class="fa-solid fa-unlock-keyhole"></i>
                 Reset Password</a></li>
           </ul>
 
@@ -166,31 +166,8 @@
   </div>
 
   <!-- <script src="app.js"></script> -->
-  <script>
-    // JavaScript to open and close the popup
-    document.addEventListener('DOMContentLoaded', function () {
-      const popupTriggers = document.querySelectorAll('.popup-trigger');
-      const popup = document.querySelector('.popup');
-      const closePopup = document.querySelector('.close-popup');
+  <script src="back.js"></script>
 
-      popupTriggers.forEach(trigger => {
-        trigger.addEventListener('click', function () {
-          popup.classList.remove('hidden');
-        });
-      });
-
-      closePopup.addEventListener('click', function () {
-        popup.classList.add('hidden');
-      });
-
-      // Close popup when clicking outside of it
-      window.addEventListener('click', function (e) {
-        if (e.target === popup) {
-          popup.classList.add('hidden');
-        }
-      });
-    });
-  </script>
 
 </body>
 
