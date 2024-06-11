@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="src/output.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- font Bebas Neue  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <!-- Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="bg-gray-100">
+    <div class="flex">
+      <div class=" absolute md:relative bg-[#09080B] toggle text-white w-56 min-h-screen hidden md:block " id="">
+        <!-- Your Sidebar Content -->
+        <div class="p-4 font-Bebas ">
+          <h1 class=" text-[30px] md:text-[40px] font-Bebas ">Dashboard</h1>
+          <ul class="mt-6 text-[20px] md:text-[25px] tracking-[1px]">
+            <li class="mb-3"><a href="homeDash.html" class=" flex items-center gap-2 hover:text-[#FDC031]">
+                <i class="fa-solid fa-shop"></i>
+                Home
+              </a></li>
+            <li class="mb-3"><a href="ProductsDash.html" class="flex items-center gap-2  hover:text-[#FDC031]">
+                <i class="fa-solid fa-basket-shopping"></i>
+                Products</a></li>
+            <li class="mb-3"><a href="OrderDash.html" class=" flex items-center gap-2 hover:text-[#FDC031]">
+                <i class="fa-regular fa-bell"></i>
+                The Order</a></li>
+            <li class="mb-3"><a href="BackgroundDash.html" class=" hover:text-[#FDC031] flex items-center gap-2">
+                <i class="fa-solid fa-images"></i>
+                theme</a></li>
+
+            <li class="mb-3"><a href="submitDash.html" class="flex items-center gap-2 hover:text-[#FDC031]">
+                <i class="fa-solid fa-user"></i>
+                submit</a></li>
+         <li class="mb-3"><a href="resetpassword.html" class="flex items-center gap-2 hover:text-[#FDC031]">
+              <i class="fa-solid fa-unlock-keyhole"></i>
+                Reset Password</a></li>
+          </ul>
+
+          <h2 class="mt-20">
+            <a href="login.html" class="flex items-center gap-2  text-[25px] hover:text-[#FDC031]">
+              <i class="fa-solid fa-arrow-right-from-bracket"></i>
+              Log out
+            </a>
+          </h2>
+        </div>
+      </div>
+      <div class="flex-1 flex flex-col overflow-hidden">
+        <!-- Navbar -->
+        <div class="bg-white shadow">
+          <div class="container mx-auto">
+            <div class="flex justify-between items-center py-4 px-2">
+              <img src="image/logoblack.svg" alt="" class="w-40">
+
+              <button class="block md:hidden text-gray-500 hover:text-gray-600" id="hamburger">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                  </path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Content Body -->
+        <div class="flex-1 overflow-hidden p-4 mt-5">
+
+          <h1 class="text-3xl font-Bebas font-bold ml-10">theme</h1>
+
+
+          <!--  -->
+          <!-- Popup -->
+
+
+          <!--  -->
+          <div class="">
+
+
+            <div class="relative popup-trigger max-w-7xl mx-auto mt-20 ">
+              <img class="h-64 w-full object-cover rounded-md"
+                src="https://images.unsplash.com/photo-1680725779155-456faadefa26" alt="Random image">
+              <div class="absolute inset-0 bg-gray-700 opacity-60 rounded-md"></div>
+              <div class="absolute top-2 left-2 flex items-center justify-center">
+                <h2 class="text-white text-3xl font-Bebas tracking-[6px] font-bold">HOME</h2>
+              </div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <h2 class="text-white text-3xl font-bold">Get Lost in Mountains</h2>
+              </div>
+            </div>
+            <div class="relative popup-trigger max-w-7xl mx-auto mt-20">
+              <img class="h-64 w-full object-cover rounded-md"
+                src="https://images.unsplash.com/photo-1680725779155-456faadefa26" alt="Random image">
+              <div class="absolute inset-0 bg-gray-700 opacity-60 rounded-md"></div>
+              <div class="absolute top-2 left-2 flex items-center justify-center">
+                <h2 class="text-white text-3xl font-Bebas tracking-[6px] font-bold">About</h2>
+              </div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <h2 class="text-white text-3xl font-bold">Get Lost in Mountains</h2>
+              </div>
+            </div>
+
+          </div>
+          <!-- Popup -->
+          <div
+            class="popup hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-50 flex justify-center items-center">
+            <div class="bg-white overflow-hidden rounded-lg">
+              <div class="flex  items-center mb-4">
+                <div class="w-full">
+                  <div class="text-2xl py-4 px-6 bg-gray-900 text-white text-center font-bold uppercase">
+                    content Changed
+                  </div>
+
+                  <form class="py-4 px-6 text-lg  overflow-y-auto" action="" method="POST">
+                    <!-- Image upload section -->
+                    <div class="mb-4">
+                      <label class="block text-gray-700 font-bold mb-2">Upload Images</label>
+                      <div class="drop-zone border-dashed border-gray-300 border-2 p-4 cursor-pointer text-center">
+                        <p>Upload photos</p>
+                        <input type="file" id="file-input" multiple accept="image/*" class="hidden" />
+                      </div>
+                      <div class="image-preview flex flex-wrap mt-4" id="image-preview"></div>
+                    </div>
+                    <div class="mb-4">
+
+                      <label class="block text-gray-700 font-bold mb-2" for="name">
+                        Enter Text
+                      </label>
+                      <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="name" type="text" placeholder=" Name Product (en)">
+                    </div>
+
+                    <!--  -->
+
+                  </form>
+                  <div class="flex items-center gap-3 justify-center mb-4 ">
+                    <button
+                      class="bg-[#FDC031] text-[#09080B] py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                      type="submit">
+                      ADD A PRODUCT
+                    </button>
+                    <button class="close-popup  px-4 py-2 bg-red-500 text-white rounded-md">Close</button>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <script src="app.js"></script> -->
+  <script>
+    // JavaScript to open and close the popup
+    document.addEventListener('DOMContentLoaded', function () {
+      const popupTriggers = document.querySelectorAll('.popup-trigger');
+      const popup = document.querySelector('.popup');
+      const closePopup = document.querySelector('.close-popup');
+
+      popupTriggers.forEach(trigger => {
+        trigger.addEventListener('click', function () {
+          popup.classList.remove('hidden');
+        });
+      });
+
+      closePopup.addEventListener('click', function () {
+        popup.classList.add('hidden');
+      });
+
+      // Close popup when clicking outside of it
+      window.addEventListener('click', function (e) {
+        if (e.target === popup) {
+          popup.classList.add('hidden');
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>
