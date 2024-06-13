@@ -721,6 +721,10 @@ body {
   right: 4rem;
 }
 
+.right-4 {
+  right: 1rem;
+}
+
 .right-\[4px\] {
   right: 4px;
 }
@@ -749,28 +753,16 @@ body {
   top: 14px;
 }
 
+.top-\[18px\] {
+  top: 18px;
+}
+
 .top-\[4px\] {
   top: 4px;
 }
 
 .top-\[50px\] {
   top: 50px;
-}
-
-.right-4 {
-  right: 1rem;
-}
-
-.top-3 {
-  top: 0.75rem;
-}
-
-.top-\[\] {
-  top: ;
-}
-
-.top-\[18px\] {
-  top: 18px;
 }
 
 .z-10 {
@@ -1594,6 +1586,11 @@ body {
   border-color: rgb(71 71 73 / var(--tw-border-opacity));
 }
 
+.border-\[\#F23E23\] {
+  --tw-border-opacity: 1;
+  border-color: rgb(242 62 35 / var(--tw-border-opacity));
+}
+
 .border-\[\#FDC031\] {
   --tw-border-opacity: 1;
   border-color: rgb(253 192 49 / var(--tw-border-opacity));
@@ -1630,11 +1627,6 @@ body {
 
 .border-transparent {
   border-color: transparent;
-}
-
-.border-\[\#F23E23\] {
-  --tw-border-opacity: 1;
-  border-color: rgb(242 62 35 / var(--tw-border-opacity));
 }
 
 .bg-\[\#09080B\] {
@@ -1675,11 +1667,6 @@ body {
 .bg-\[\#FFFFFF\] {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-\[\#e5e5e9\] {
-  --tw-bg-opacity: 1;
-  background-color: rgb(229 229 233 / var(--tw-bg-opacity));
 }
 
 .bg-black {
@@ -1995,8 +1982,8 @@ body {
   padding-top: 2rem;
 }
 
-.pb-\[px\] {
-  padding-bottom: px;
+.ps-10 {
+  padding-inline-start: 2.5rem;
 }
 
 .text-left {
@@ -2267,10 +2254,6 @@ body {
   line-height: 1.25;
 }
 
-.leading-\[\] {
-  line-height: ;
-}
-
 .tracking-\[-2\%\] {
   letter-spacing: -2%;
 }
@@ -2308,6 +2291,11 @@ body {
 .text-\[\#FDC031\] {
   --tw-text-opacity: 1;
   color: rgb(253 192 49 / var(--tw-text-opacity));
+}
+
+.text-\[\#FF3C00\] {
+  --tw-text-opacity: 1;
+  color: rgb(255 60 0 / var(--tw-text-opacity));
 }
 
 .text-\[\#FFFFFF\] {
@@ -2370,9 +2358,8 @@ body {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.text-\[\#FF3C00\] {
-  --tw-text-opacity: 1;
-  color: rgb(255 60 0 / var(--tw-text-opacity));
+.text-\[\] {
+  color: ;
 }
 
 .underline {
@@ -2609,6 +2596,11 @@ body {
   border-color: rgb(253 192 49 / var(--tw-border-opacity));
 }
 
+.focus\:border-blue-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(59 130 246 / var(--tw-border-opacity));
+}
+
 .focus\:placeholder-gray-500:focus::-moz-placeholder {
   --tw-placeholder-opacity: 1;
   color: rgb(107 114 128 / var(--tw-placeholder-opacity));
@@ -2644,6 +2636,11 @@ body {
 .focus\:ring-gray-200:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity));
+}
+
+.focus\:ring-blue-500:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
 }
 
 .focus\:ring-offset-2:focus {
@@ -2951,14 +2948,6 @@ body {
 
   .md\:mt-\[60px\] {
     margin-top: 60px;
-  }
-
-  .md\:mt-\[50px\] {
-    margin-top: 50px;
-  }
-
-  .md\:mt-\[10px\] {
-    margin-top: 10px;
   }
 
   .md\:mt-\[90px\] {
@@ -3487,4 +3476,46 @@ body {
 
 .rtl\:space-x-reverse:where([dir="rtl"], [dir="rtl"] *) > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark\:border-gray-600 {
+    --tw-border-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity));
+  }
+
+  .dark\:bg-gray-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  }
+
+  .dark\:text-gray-400 {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-white {
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+
+  .dark\:placeholder-gray-400::-moz-placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-placeholder-opacity));
+  }
+
+  .dark\:placeholder-gray-400::placeholder {
+    --tw-placeholder-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-placeholder-opacity));
+  }
+
+  .dark\:focus\:border-blue-500:focus {
+    --tw-border-opacity: 1;
+    border-color: rgb(59 130 246 / var(--tw-border-opacity));
+  }
+
+  .dark\:focus\:ring-blue-500:focus {
+    --tw-ring-opacity: 1;
+    --tw-ring-color: rgb(59 130 246 / var(--tw-ring-opacity));
+  }
 }

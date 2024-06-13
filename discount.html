@@ -150,282 +150,88 @@
               <div class="flex  items-center mb-4">
                 <div class="w-full">
                   <div class="text-2xl py-4 px-6 bg-gray-900 text-white text-center font-bold uppercase">
-                    Order details
+                    Add Coupon
                   </div>
 
-                  <div class="py-4 px-6  h-[85vh] overflow-y-auto" action="" method="POST">
-                    <div class="mb-4 ">
-                      <div
-                        class="grid  gap-5 grid-cols-1 w-full md:max-w-[64rem] md:grid-cols-2 lg:max-w-full lg:grid-cols-2 ">
-                        <div class="flex gap-6">
-                          <img src="image/shirt.png" alt="shirt" class="w-[70px] h-[70px]">
-                          <div class="font-Bebas w-[85%] text-[#09080B]" style="width: 80%;">
-                            <h3 class="text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
-                            <div class="
-                            grid  gap-2 grid-cols-2 max-w-sm  md:grid-cols-2  lg:grid-cols-3 
-                             justify-between text-[25px] w-[85%] items-center">
-                              <h5>
-                                <p class="p-1  sm:w-6 w-[18px] h-[17px] sm:h-6 border cursor-pointer bg-black ">
-                                </p>
-                              </h5>
-                              <div class="flex gap-1 items-center">
-                                <h5>size: </h5>
-                                <p class="text-[#474749]"> M</p>
-                              </div>
-                              <div class="flex gap-1 items-center">
-                                <h5> qty: </h5>
-                                <p class="text-[#474749]">1</p>
-                              </div>
+                  <div class="py-4 px-6   overflow-y-auto" action="" method="POST">
+                    <div class="mb-4">
 
-                            </div>
-                          </div>
-                          <h5 class="  font-Bebas text-[#09080B] text-[25px] leading-[22.5px] mr-3 text-right">200
-                            nis</h5>
-                        </div>
-                        <div class="flex gap-6">
-                          <img src="image/shirt.png" alt="shirt" class="w-[70px] h-[70px]">
-                          <div class="font-Bebas w-[85%] text-[#09080B]" style="width: 80%;">
-                            <h3 class="text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
-                            <div class="
-                            grid  gap-2 grid-cols-2 max-w-sm  md:grid-cols-2  lg:grid-cols-3 
-                             justify-between text-[25px] w-[85%] items-center">
-                              <h5>
-                                <p class="p-1  sm:w-6 w-[18px] h-[17px] sm:h-6 border cursor-pointer bg-black ">
-                                </p>
-                              </h5>
-                              <div class="flex gap-1 items-center">
-                                <h5>size: </h5>
-                                <p class="text-[#474749]"> M</p>
-                              </div>
-                              <div class="flex gap-1 items-center">
-                                <h5> qty: </h5>
-                                <p class="text-[#474749]">1</p>
-                              </div>
-
-                            </div>
-                          </div>
-                          <h5 class="  font-Bebas text-[#09080B] text-[25px] leading-[22.5px] mr-3 text-right">200
-                            nis</h5>
-                        </div>
-                        <div class="flex gap-6">
-                          <img src="image/shirt.png" alt="shirt" class="w-[70px] h-[70px]">
-                          <div class="font-Bebas w-[85%] text-[#09080B]" style="width: 80%;">
-                            <h3 class="text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
-                            <div class="
-                            grid  gap-2 grid-cols-2 max-w-sm  md:grid-cols-2  lg:grid-cols-3 
-                             justify-between text-[25px] w-[85%] items-center">
-                              <h5>
-                                <p class="p-1  sm:w-6 w-[18px] h-[17px] sm:h-6 border cursor-pointer bg-black ">
-                                </p>
-                              </h5>
-                              <div class="flex gap-1 items-center">
-                                <h5>size: </h5>
-                                <p class="text-[#474749]"> M</p>
-                              </div>
-                              <div class="flex gap-1 items-center">
-                                <h5> qty: </h5>
-                                <p class="text-[#474749]">1</p>
-                              </div>
-
-                            </div>
-                          </div>
-                          <h5 class="  font-Bebas text-[#09080B] text-[25px] leading-[22.5px] mr-3 text-right">200
-                            nis</h5>
-                        </div>
-                      </div>
+                      <label class="block text-gray-700 font-bold mb-2" for="name">
+                        coupon
+                      </label>
+                      <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="name" type="text" placeholder=" New coupon">
                     </div>
+
                     <div class="mb-4">
                       <div class="sm:flex gap-4 items-center">
                         <div class="w-full ">
                           <label class="block text-gray-700 font-bold mb-2" for="name">
-                            Order status
+                            Discount type
                           </label>
-                          <div class="">
-                            <select id="gender" name="gender" class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-[#FDC031]
-                              shadow appearance-none  py-2 px-3 text-gray-700 leading-tight" required>
-                              <option value="">New order</option>
-                              <option value="">Under implementation</option>
-                              <option value="">Charging</option>
-                              <option value="">Sent delivered</option>
-                            </select>
+                          <div class="flex gap-3">
+                            <div class="">
+                              <select id="gender" name="gender" class="border border-gray-400 p-2 w-full rounded-lg focus:outline-none focus:border-[#FDC031]
+                            shadow appearance-none  py-2 px-3 text-gray-700 leading-tight" required>
+                                <option value="">Constant ratio </option>
+                                <option value="">fixed amount</option>
+                              </select>
+                            </div>
+                            <input
+                              class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                              id="name" type="text" placeholder=" 200$">
                           </div>
 
                         </div>
 
                       </div>
                     </div>
-                    <div class="mb-4">
-                      <div class="sm:flex gap-4 items-center">
-                        <div class="w-full sm:w-2/4">
-                          <label class="block text-gray-700 font-bold mb-2" for="name">
-                            Gmail
-                          </label>
-                          <div
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight">
-                            mallpet9@gmail.com</div>
+                    <div class="mb-4 flex gap-3 w-full items-center">
 
-                        </div>
-                        <div class="w-full sm:w-2/4">
-                          <label class="block text-gray-700 font-bold mb-2" for="name">
-                            Number
-                          </label>
-                          <div
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight">
-                            +972 53 420 3499</div>
+                      <div class="w-2/4">
+                        <label class="block  text-gray-700 font-bold mb-2" for="name">
+                          Start Date
+                        </label>
+                        <input
+                          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          id="name" type="date" placeholder="">
+                      </div>
+                      <span class="text-[#FDC031] text-2xl">to</span>
 
-                        </div>
+                      <div class="w-2/4">
+                        <label class="block  text-gray-700 font-bold mb-2" for="name">
+                          Expiry date
+                        </label>
+                        <input
+                          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                          id="name" type="date" placeholder="">
                       </div>
                     </div>
+
                     <div class="mb-4">
-                      <div class="sm:flex gap-4 items-center">
-                        <div class="w-full sm:w-2/4">
-                          <label class="block text-gray-700 font-bold mb-2" for="name">
-                            First Name
-                          </label>
-                          <div
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight">
-                            kaheld</div>
 
-                        </div>
-                        <div class="w-full sm:w-2/4">
-                          <label class="block text-gray-700 font-bold mb-2" for="name">
-                            Last Name
-                          </label>
-                          <div
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight">
-                            Mohamed</div>
-
-                        </div>
-                      </div>
+                      <label class="block text-gray-700 font-bold mb-2" for="name">
+                        minimum
+                      </label>
+                      <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="name" type="number" placeholder=" minimum">
                     </div>
                     <div class="mb-4">
-                      <div class="flex gap-4 items-center">
-                        <div class="w-full">
-                          <label class="block text-gray-700 font-bold mb-2" for="name">
-                            the address
-                          </label>
-                          <div
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight">
-                            Derech HaAtsma'ut 41, Haifa, apt4</div>
 
-                        </div>
-
-                      </div>
-                    </div>
-                    <div class="mb-4">
-                      <div class="sm:flex gap-4 items-center">
-                        <div class="w-full sm:w-2/4">
-                          <label class="block text-gray-700 font-bold mb-2" for="name">
-                            Country
-                          </label>
-                          <div
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight">
-                            Egypt</div>
-
-                        </div>
-                        <div class="w-full sm:w-2/4">
-                          <label class="block text-gray-700 font-bold mb-2" for="name">
-                            City
-                          </label>
-                          <div
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight">
-                            Cairo</div>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mb-4">
-                      <div class="sm:flex gap-4 items-center">
-                        <div class="w-full sm:w-2/4">
-                          <label class="block text-gray-700 font-bold mb-2" for="name">
-                            City
-                          </label>
-                          <div
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight">
-                            Cairo</div>
-
-                        </div>
-                        <div class="w-full sm:w-2/4">
-                          <label class="block text-gray-700 font-bold mb-2" for="name">
-                            Postal code
-                          </label>
-                          <div
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight">
-                            33380</div>
-
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mb-4">
-                      <div class="flex gap-4 items-center">
-                        <div class="w-full">
-                          <label class="block text-gray-700 font-bold mb-2" for="name">
-                            shipping method
-                          </label>
-                          <div
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight">
-                            Standard (6-10 business days) - 00 NIS</div>
-
-                        </div>
-
-                      </div>
-                    </div>
-                    <div class="mb-2">
-                      <div class="flex gap-4 items-center">
-                        <div class="w-full flex justify-between text-3xl font-Bebas ">
-                          <label class="block tracking-[10px] text-gray-700 font-bold " for="name">
-                            the price
-                          </label>
-
-
-                        </div>
-
-                      </div>
-                    </div>
-                    <div class="">
-                      <div class="flex gap-4 items-center">
-                        <div class="w-full flex justify-between text-2xl font-Bebas ">
-                          <label class="block tracking-[10px] text-gray-700 font-bold " for="name">
-                            total cost
-                          </label>
-                          <div class="">
-                            600 iNS</div>
-
-                        </div>
-
-                      </div>
-                    </div>
-                    <div class="">
-                      <div class="flex gap-4 items-center">
-                        <div class="w-full flex justify-between text-2xl font-Bebas ">
-                          <label class="block tracking-[10px] text-gray-700 font-bold" for="name">
-                            Discounts
-                          </label>
-                          <div class="">
-                            50</div>
-
-                        </div>
-
-                      </div>
-                    </div>
-                    <div class="">
-                      <div class="flex gap-4 items-center">
-                        <div class="w-full flex justify-between text-2xl font-Bebas ">
-                          <label class="block tracking-[10px] text-gray-700 font-bold" for="name">
-                            The final price
-                          </label>
-                          <div class="">
-                            550</div>
-
-                        </div>
-
-                      </div>
+                      <label class="block text-gray-700 font-bold mb-2" for="name">
+                        maximum
+                      </label>
+                      <input
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        id="name" type="number" placeholder=" maximum">
                     </div>
                     <div class="flex items-center gap-3 justify-center mt-5 ">
                       <button
                         class="bg-[#FDC031] text-[#09080B] py-2 px-4 rounded focus:outline-none focus:shadow-outline"
                         type="submit">
-                        ADD A PRODUCT
+                        ADD A coupon
                       </button>
                       <button class="close-popup  px-4 py-2 bg-red-500 text-white rounded-md">Close</button>
                     </div>
