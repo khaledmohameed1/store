@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Slider</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 100%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      background-color: #1a1a1a;
+      padding: 20px;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card {
+      width: calc(25% - 20px);
+      margin: 0 10px;
+      padding: 20px;
+      background-color: black;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      flex: 0 0 auto;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+
+    .arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2em;
+      cursor: pointer;
+      user-select: none;
+      z-index: 1000;
+      display: none;
+    }
+
+    .left-arrow {
+      left: 10px;
+    }
+
+    .right-arrow {
+      right: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" id="container">
+    <div class="arrow left-arrow" id="leftArrow">&#10094;</div>
+    <div class="slider" id="slider">
+      <div class="card">
+        <a href="#">
+          <div>
+            <img src="image/shirt.png" alt="shirt" class="w-[172px] h-[172px] md:w-full md:h-auto">
+          </div>
+          <div class="md:flex text-[#FFFFFF] justify-between py-2 font-bold text-[14px] md:text-[18px] font-Manrope">
+            <h2>Short-sleeved shirt</h2>
+            <h2>200 NIS</h2>
+          </div>
+        </a>
+      </div>
+      <div class="card">Card 2</div>
+      <div class="card">Card 3</div>
+      <div class="card">Card 4</div>
+      <div class="card">Card 5</div>
+      <div class="card">Card 6</div>
+      <div class="card">Card 7</div>
+      <div class="card">Card 8</div>
+      <div class="card">Card 9</div>
+      <div class="card">Card 10</div>
+    </div>
+    <div class="arrow right-arrow" id="rightArrow">&#10095;</div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const slider = document.getElementById('slider');
+      const container = document.getElementById('container');
+
+      let currentIndex = 0;
+      const visibleCards = 4;
+      const totalCards = slider.children.length;
+      const slideWidth = container.clientWidth / visibleCards;
+      let interval;
+
+      let isDown = false;
+      let startX;
+      let scrollLeft;
+
+      function updateSlider() {
+        const newTransform = -currentIndex * slideWidth;
+        slider.style.transform = `translateX(${newTransform}px)`;
+      }
+
+      function startAutoSlide() {
+        interval = setInterval(() => {
+          currentIndex = (currentIndex + 1) % (totalCards + visibleCards);
+          if (currentIndex > totalCards - visibleCards) {
+            currentIndex = 0;
+          }
+          updateSlider();
+        }, 2000);
+      }
+
+      function stopAutoSlide() {
+        clearInterval(interval);
+      }
+
+      container.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - container.offsetLeft;
+        scrollLeft = slider.style.transform.replace('translateX(', '').replace('px)', '') || 0;
+        slider.style.transition = 'none';
+        stopAutoSlide();
+      });
+
+      container.addEventListener('mouseleave', () => {
+        isDown = false;
+      });
+
+      container.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.style.transition = 'transform 0.3s ease-in-out';
+        setTimeout(startAutoSlide, 2000); // Restart auto sliding after 2 seconds
+      });
+
+      container.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - container.offsetLeft;
+        const walk = (x - startX) * 3; // Adjust the scroll speed
+        slider.style.transform = `translateX(${parseInt(scrollLeft) + walk}px)`;
+      });
+
+      container.addEventListener('mouseover', stopAutoSlide);
+      container.addEventListener('mouseout', startAutoSlide);
+
+      startAutoSlide();
+    });
+  </script>
+</body>
+
+</html>

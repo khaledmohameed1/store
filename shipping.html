@@ -201,12 +201,12 @@
   <!-- end navber -->
   <section class="">
     <div>
-      <div class="flex gap-5 ">
+      <div class="flex flex-col sm:flex-row sm:gap-5 ">
         <!--  -->
-        <div class="w-[65%] mt-[100px] md:mt-[90px]  px-4 md:px-8">
-          <div class="flex gap-7 mt-1">
-            <div class="flex gap-5 font-Bebas text-[50px] leading-[42px] text-[#474749]">
-              <h3>cart</h3>
+        <div class=" w-full sm:w-[65%] mt-[25px] sm:mt-[100px] md:mt-[90px]  px-4 md:px-8 order-2 sm:order-1">
+          <div class="sm:flex sm:gap-7 mt-1">
+            <div class="sm:flex sm:gap-5 font-Bebas text-[50px] leading-[42px] text-[#474749]">
+              <h3 class="hidden sm:block">cart</h3>
 
             </div>
             <p
@@ -214,12 +214,14 @@
               shipping
             </p>
             <div class="flex gap-5 font-Bebas text-[50px] leading-[42px] text-[#474749]">
-              <h3>Payment</h3>
+              <h3 class="hidden sm:block">Payment</h3>
 
             </div>
           </div>
           <div>
-            <h3 class="text-[50px] leading-[42px] text-[#474749] font-Bebas mb-4">customer information</h3>
+            <h3 class="text-[32px] leading-[28.8px] sm:text-[50px]  sm:leading-[42px] text-[#474749] font-Bebas mb-4">
+              customer information
+            </h3>
             <form class="">
               <div class="flex flex-col md:flex-row gap-5 ">
                 <div class="md:mb-5 w-full md:w-2/4">
@@ -233,9 +235,24 @@
                     id="phone" type="text" placeholder="+972 53 420 3499">
                 </div>
               </div>
-
+              <h3
+                class="text-[32px] leading-[28.8px] sm:text-[50px]  sm:leading-[42px] text-[#474749] font-Bebas mb-4 mt-11 sm:mt-0">
+                shipping address
+              </h3>
               <div class="flex flex-col md:flex-row gap-5 ">
-                <div class="md:mb-5 w-full">
+                <div class="md:mb-5 w-full md:w-2/4">
+                  <input
+                    class=" text-[18px]   placeholder-[#09080B] text-[#09080B] leading-[21.96px] appearance-none border border-[#09080B]  w-full py-4 px-5  focus:placeholder-gray-500 focus:outline-none focus:shadow-outline"
+                    id="text" type="text" placeholder="khaled">
+                </div>
+                <div class="md:mb-5 w-full md:w-2/4">
+                  <input
+                    class=" text-[18px] mb-5 sm:mb-0 placeholder-[#09080B] text-[#09080B] leading-[21.96px] appearance-none border border-[#09080B]  w-full py-4 px-5  focus:placeholder-gray-500 focus:outline-none focus:shadow-outline"
+                    id="text" type="text" placeholder="mohamed">
+                </div>
+              </div>
+              <div class="flex flex-col md:flex-row gap-5 ">
+                <div class="md:mb-5 w-full mb-5">
 
                   <input
                     class=" text-[18px] placeholder-[#09080B] text-[#09080B] leading-[21.96px] appearance-none border border-[#09080B]  w-full py-4 px-5  focus:placeholder-gray-500 focus:outline-none focus:shadow-outline"
@@ -265,7 +282,7 @@
 
                 <div class="md:mb-5 w-full md:w-2/4 relative">
                   <select
-                    class="text-[18px] placeholder-[#09080B] text-[#09080B] leading-[21.96px] appearance-none border border-[#09080B] w-full py-4 px-5 focus:placeholder-gray-500 focus:outline-none focus:shadow-outline bg-white">
+                    class="text-[18px]  mb-4 sm:mb-0 placeholder-[#09080B] text-[#09080B] leading-[21.96px] appearance-none border border-[#09080B] w-full py-4 px-5 focus:placeholder-gray-500 focus:outline-none focus:shadow-outline bg-white">
                     <option value="cairo">cairo</option>
                     <option value="cairo">cairo</option>
                     <option value="cairo">cairo</option>
@@ -309,9 +326,12 @@
             </form>
           </div>
 
-          <div class="flex justify-between items-start p-4">
-            <div class="flex flex-col space-y-5 w-2/4">
-              <h4 class="text-[50px] leading-[42px] text-[#474749] font-Bebas">SHIPPING METHOD</h4>
+          <div class=" flex flex-col sm:flex-row justify-between items-start sm:p-4">
+            <div class="flex order-2 sm:order-1 flex-col w-full  space-y-5 sm:w-2/4">
+              <h4
+                class="text-[32px] sm:text-[50px] leading-[28px] sm:leading-[42px] text-[#474749] font-Bebas mt-4 sm:mt-0">
+                SHIPPING
+                METHOD</h4>
               <div class="relative flex items-center">
                 <input type="radio" id="option1" name="radioGroup" value="option1" class="radio-hidden" checked>
                 <label for="option1" class="radio-label flex items-center cursor-pointer relative">
@@ -330,17 +350,31 @@
                   <span class="ml-4 text-lg font-manrope">Expedited (1-2 business days) - 100 NIS</span>
                 </label>
               </div>
+
+              <button style="margin-bottom: 10px;"
+                class="font-Manrope mt-4 uppercase font-semibold text-[#FFFFFF] text-[25px] leading-[30.5px] bg-[#474749]  w-full py-4 sm:p-3">
+                continue to payment
+              </button>
+
             </div>
-            <div class="flex items-center  w-2/4">
-              <h1 class="text-[50px] leading-[42px] lg:w-[80%] font-Bebas text-[#FF3C00]">ENTER THE REQUIRED INFORMATION
+            <div class="flex order-1 sm:order-2 items-center mt-4 sm:mt-0 sm:w-2/4">
+              <h1
+                class="sm:text-[50px] text-[20px] leading-[18px] sm:leading-[42px] lg:w-[80%] font-Bebas text-[#FF3C00]">
+                ENTER THE REQUIRED INFORMATION
               </h1>
             </div>
+
           </div>
 
         </div>
         <!--  -->
-        <div class="bg-[#09080B] h-[100vh]  flex-1 px-4">
-          <div class="font-Bebas text-[50px] leading-[42px] text-[#FFFFFF] mt-[188px] flex justify-between">
+        <div class="order-1 sm:order-2 sm:bg-[#09080B] sm:h-[100vh]  flex-1 px-4">
+          <div
+            class="mt-24 sm:hidden  mb-4 text-[14px] text-[#09080B] font-Manrope font-medium leading-[17.08px] flex justify-between">
+            <h3>Show order summary <i class="fa-solid fa-chevron-up"></i></h3>
+            <span>620 NIS</span>
+          </div>
+          <div class="hidden sm:flex font-Bebas text-[50px] leading-[42px] text-[#FFFFFF] mt-[188px]  justify-between">
             <h3 class="">Choose payment method</h3>
             <h3>3 items</h3>
           </div>
@@ -351,204 +385,165 @@
 
           <!-- Dropdown menu -->
           <div id="dropdownUsers" class="z-10  ">
-            <ul class="h-48 py-2 overflow-y-auto text-[#ffffff]">
+            <ul class=" h-72 sm:h-48 py-2 overflow-y-auto text-[#ffffff]">
               <li class="flex gap-6 mb-4">
-                <img src="image/shirt.png" alt="shirt" class="w-[52px] h-[52px]">
-                <div class="font-Bebas w-[65%] text-[#FFFFFF]">
-                  <h3 class="text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
-                  <div class="flex justify-between text-[25px] w-[70%]">
+                <img src="image/shirt.png" alt="shirt" class="w-[62px] h-[62px] sm:w-[52px] sm:h-[52px]">
+                <div class="font-Bebas w-[50%] sm:w-[65%] text-[#09080B] sm:text-[#FFFFFF]">
+                  <h3 class="text-[20px] w-[80%] sm:text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
+                  <div
+                    class="flex font-Manrope capitalize sm:font-Bebas justify-between text-[14px] sm:text-[25px] w-[70%]">
                     <h5>black</h5>
                     <div class="flex gap-1 items-center">
                       <h5>size: </h5>
                       <p class="text-[#474749]"> M</p>
                     </div>
-                    <div class="flex gap-1 items-center">
+                    <div class=" gap-1 items-center hidden sm:flex">
                       <h5> qty: </h5>
                       <p class="text-[#474749]">1</p>
                     </div>
 
                   </div>
                 </div>
-                <h5 class=" flex-1 font-Bebas text-[#FFFFFF] text-[25px] leading-[22.5px] mr-3 text-right">200 nis</h5>
+                <h5
+                  class=" flex-1 font-Bebas text-[#09080B] sm:text-[#FFFFFF] text-[25px] leading-[22.5px] mr-3 text-right">
+                  200 nis</h5>
               </li>
               <li class="flex gap-6 mb-4">
-                <img src="image/shirt.png" alt="shirt" class="w-[52px] h-[52px]">
-                <div class="font-Bebas w-[65%] text-[#FFFFFF]">
-                  <h3 class="text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
-                  <div class="flex justify-between text-[25px] w-[70%]">
+                <img src="image/shirt.png" alt="shirt" class="w-[62px] h-[62px] sm:w-[52px] sm:h-[52px]">
+                <div class="font-Bebas w-[50%] sm:w-[65%] text-[#09080B] sm:text-[#FFFFFF]">
+                  <h3 class="text-[20px] w-[80%] sm:text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
+                  <div
+                    class="flex font-Manrope capitalize sm:font-Bebas justify-between text-[14px] sm:text-[25px] w-[70%]">
                     <h5>black</h5>
                     <div class="flex gap-1 items-center">
                       <h5>size: </h5>
                       <p class="text-[#474749]"> M</p>
                     </div>
-                    <div class="flex gap-1 items-center">
+                    <div class=" gap-1 items-center hidden sm:flex">
                       <h5> qty: </h5>
                       <p class="text-[#474749]">1</p>
                     </div>
 
                   </div>
                 </div>
-                <h5 class=" flex-1 font-Bebas text-[#FFFFFF] text-[25px] leading-[22.5px] mr-3 text-right">200 nis</h5>
+                <h5
+                  class=" flex-1 font-Bebas text-[#09080B] sm:text-[#FFFFFF] text-[25px] leading-[22.5px] mr-3 text-right">
+                  200 nis</h5>
               </li>
               <li class="flex gap-6 mb-4">
-                <img src="image/shirt.png" alt="shirt" class="w-[52px] h-[52px]">
-                <div class="font-Bebas w-[65%] text-[#FFFFFF]">
-                  <h3 class="text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
-                  <div class="flex justify-between text-[25px] w-[70%]">
+                <img src="image/shirt.png" alt="shirt" class="w-[62px] h-[62px] sm:w-[52px] sm:h-[52px]">
+                <div class="font-Bebas w-[50%] sm:w-[65%] text-[#09080B] sm:text-[#FFFFFF]">
+                  <h3 class="text-[20px] w-[80%] sm:text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
+                  <div
+                    class="flex font-Manrope capitalize sm:font-Bebas justify-between text-[14px] sm:text-[25px] w-[70%]">
                     <h5>black</h5>
                     <div class="flex gap-1 items-center">
                       <h5>size: </h5>
                       <p class="text-[#474749]"> M</p>
                     </div>
-                    <div class="flex gap-1 items-center">
+                    <div class=" gap-1 items-center hidden sm:flex">
                       <h5> qty: </h5>
                       <p class="text-[#474749]">1</p>
                     </div>
 
                   </div>
                 </div>
-                <h5 class=" flex-1 font-Bebas text-[#FFFFFF] text-[25px] leading-[22.5px] mr-3 text-right">200 nis</h5>
+                <h5
+                  class=" flex-1 font-Bebas text-[#09080B] sm:text-[#FFFFFF] text-[25px] leading-[22.5px] mr-3 text-right">
+                  200 nis</h5>
               </li>
               <li class="flex gap-6 mb-4">
-                <img src="image/shirt.png" alt="shirt" class="w-[52px] h-[52px]">
-                <div class="font-Bebas w-[65%] text-[#FFFFFF]">
-                  <h3 class="text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
-                  <div class="flex justify-between text-[25px] w-[70%]">
+                <img src="image/shirt.png" alt="shirt" class="w-[62px] h-[62px] sm:w-[52px] sm:h-[52px]">
+                <div class="font-Bebas w-[50%] sm:w-[65%] text-[#09080B] sm:text-[#FFFFFF]">
+                  <h3 class="text-[20px] w-[80%] sm:text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
+                  <div
+                    class="flex font-Manrope capitalize sm:font-Bebas justify-between text-[14px] sm:text-[25px] w-[70%]">
                     <h5>black</h5>
                     <div class="flex gap-1 items-center">
                       <h5>size: </h5>
                       <p class="text-[#474749]"> M</p>
                     </div>
-                    <div class="flex gap-1 items-center">
+                    <div class=" gap-1 items-center hidden sm:flex">
                       <h5> qty: </h5>
                       <p class="text-[#474749]">1</p>
                     </div>
 
                   </div>
                 </div>
-                <h5 class=" flex-1 font-Bebas text-[#FFFFFF] text-[25px] leading-[22.5px] mr-3 text-right">200 nis</h5>
+                <h5
+                  class=" flex-1 font-Bebas text-[#09080B] sm:text-[#FFFFFF] text-[25px] leading-[22.5px] mr-3 text-right">
+                  200 nis</h5>
               </li>
               <li class="flex gap-6 mb-4">
-                <img src="image/shirt.png" alt="shirt" class="w-[52px] h-[52px]">
-                <div class="font-Bebas w-[65%] text-[#FFFFFF]">
-                  <h3 class="text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
-                  <div class="flex justify-between text-[25px] w-[70%]">
+                <img src="image/shirt.png" alt="shirt" class="w-[62px] h-[62px] sm:w-[52px] sm:h-[52px]">
+                <div class="font-Bebas w-[50%] sm:w-[65%] text-[#09080B] sm:text-[#FFFFFF]">
+                  <h3 class="text-[20px] w-[80%] sm:text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
+                  <div
+                    class="flex font-Manrope capitalize sm:font-Bebas justify-between text-[14px] sm:text-[25px] w-[70%]">
                     <h5>black</h5>
                     <div class="flex gap-1 items-center">
                       <h5>size: </h5>
                       <p class="text-[#474749]"> M</p>
                     </div>
-                    <div class="flex gap-1 items-center">
+                    <div class=" gap-1 items-center hidden sm:flex">
                       <h5> qty: </h5>
                       <p class="text-[#474749]">1</p>
                     </div>
 
                   </div>
                 </div>
-                <h5 class=" flex-1 font-Bebas text-[#FFFFFF] text-[25px] leading-[22.5px] mr-3 text-right">200 nis</h5>
+                <h5
+                  class=" flex-1 font-Bebas text-[#09080B] sm:text-[#FFFFFF] text-[25px] leading-[22.5px] mr-3 text-right">
+                  200 nis</h5>
               </li>
               <li class="flex gap-6 mb-4">
-                <img src="image/shirt.png" alt="shirt" class="w-[52px] h-[52px]">
-                <div class="font-Bebas w-[65%] text-[#FFFFFF]">
-                  <h3 class="text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
-                  <div class="flex justify-between text-[25px] w-[70%]">
+                <img src="image/shirt.png" alt="shirt" class="w-[62px] h-[62px] sm:w-[52px] sm:h-[52px]">
+                <div class="font-Bebas w-[50%] sm:w-[65%] text-[#09080B] sm:text-[#FFFFFF]">
+                  <h3 class="text-[20px] w-[80%] sm:text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
+                  <div
+                    class="flex font-Manrope capitalize sm:font-Bebas justify-between text-[14px] sm:text-[25px] w-[70%]">
                     <h5>black</h5>
                     <div class="flex gap-1 items-center">
                       <h5>size: </h5>
                       <p class="text-[#474749]"> M</p>
                     </div>
-                    <div class="flex gap-1 items-center">
+                    <div class=" gap-1 items-center hidden sm:flex">
                       <h5> qty: </h5>
                       <p class="text-[#474749]">1</p>
                     </div>
 
                   </div>
                 </div>
-                <h5 class=" flex-1 font-Bebas text-[#FFFFFF] text-[25px] leading-[22.5px] mr-3 text-right">200 nis</h5>
-              </li>
-              <li class="flex gap-6 mb-4">
-                <img src="image/shirt.png" alt="shirt" class="w-[52px] h-[52px]">
-                <div class="font-Bebas w-[65%] text-[#FFFFFF]">
-                  <h3 class="text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
-                  <div class="flex justify-between text-[25px] w-[70%]">
-                    <h5>black</h5>
-                    <div class="flex gap-1 items-center">
-                      <h5>size: </h5>
-                      <p class="text-[#474749]"> M</p>
-                    </div>
-                    <div class="flex gap-1 items-center">
-                      <h5> qty: </h5>
-                      <p class="text-[#474749]">1</p>
-                    </div>
-
-                  </div>
-                </div>
-                <h5 class=" flex-1 font-Bebas text-[#FFFFFF] text-[25px] leading-[22.5px] mr-3 text-right">200 nis</h5>
-              </li>
-              <li class="flex gap-6 mb-4">
-                <img src="image/shirt.png" alt="shirt" class="w-[52px] h-[52px]">
-                <div class="font-Bebas w-[65%] text-[#FFFFFF]">
-                  <h3 class="text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
-                  <div class="flex justify-between text-[25px] w-[70%]">
-                    <h5>black</h5>
-                    <div class="flex gap-1 items-center">
-                      <h5>size: </h5>
-                      <p class="text-[#474749]"> M</p>
-                    </div>
-                    <div class="flex gap-1 items-center">
-                      <h5> qty: </h5>
-                      <p class="text-[#474749]">1</p>
-                    </div>
-
-                  </div>
-                </div>
-                <h5 class=" flex-1 font-Bebas text-[#FFFFFF] text-[25px] leading-[22.5px] mr-3 text-right">200 nis</h5>
-              </li>
-              <li class="flex gap-6 mb-4">
-                <img src="image/shirt.png" alt="shirt" class="w-[52px] h-[52px]">
-                <div class="font-Bebas w-[65%] text-[#FFFFFF]">
-                  <h3 class="text-[25px] leading-[22.5px]">Short-sleeved shirt with A PRINT</h3>
-                  <div class="flex justify-between text-[25px] w-[70%]">
-                    <h5>black</h5>
-                    <div class="flex gap-1 items-center">
-                      <h5>size: </h5>
-                      <p class="text-[#474749]"> M</p>
-                    </div>
-                    <div class="flex gap-1 items-center">
-                      <h5> qty: </h5>
-                      <p class="text-[#474749]">1</p>
-                    </div>
-
-                  </div>
-                </div>
-                <h5 class=" flex-1 font-Bebas text-[#FFFFFF] text-[25px] leading-[22.5px] mr-3 text-right">200 nis</h5>
+                <h5
+                  class=" flex-1 font-Bebas text-[#09080B] sm:text-[#FFFFFF] text-[25px] leading-[22.5px] mr-3 text-right">
+                  200 nis</h5>
               </li>
 
             </ul>
 
           </div>
           <hr class="h-px  border-0 bg-[#474749]">
-          <div class="mt-4 font-Bebas text-[#FFFFFF] text-[25px] leading-[22.5px">
-            <div class=" flex justify-between ">
+          <div class="mt-4 font-Bebas text-[#FFFFFF] text-[25px] leading-[22.5px]">
+            <div class="hidden sm:flex justify-between ">
               <h5>Discount:</h5>
               <h5>-40 nis</h5>
             </div>
 
-            <div class=" flex justify-between ">
+            <div class=" hidden sm:flex justify-between ">
               <h5>tax:</h5>
               <h5>20 NIS</h5>
             </div>
-            <div class=" flex justify-between ">
+            <div class=" hidden sm:flex justify-between ">
               <h5>Shipping:</h5>
               <h5>00 NIS</h5>
             </div>
-            <div class=" flex justify-between text-[#FDC031] text-[50px] leading-[42px]">
+            <div class=" hidden sm:flex justify-between text-[#FDC031] text-[50px] leading-[42px]">
               <h5>Total:</h5>
               <h5>620 NIS</h5>
             </div>
             <button
-              class="font-Manrope mt-4 font-semibold text-[#09080B] leading-[30.5px] bg-[#FDC031] w-full py-4 p-3">
-              PAY NOW
+              class="font-Manrope mt-4 uppercase font-semibold text-[#FFFFFF] opacity-[80%] leading-[30.5px] bg-[#474749]  w-full py-4 p-3">
+              continue to payment
             </button>
           </div>
         </div>
